@@ -129,7 +129,7 @@ s_kde = KernelDensity(tf.reshape(sig_output,[-1]), #create a signal kernel densi
                       [bw], sig_weights )
 b_kde = KernelDensity(tf.reshape(bkg_output,[-1]), #create a bg kernel density centered at the outputs and weighted
                       [bw], bkg_weights)
-s_log_count = s_kde.log_cdf(cut) #get the log count for signal?
+s_log_count = s_kde.log_cdf(cut) #get the log count for signal
 b_log_count = b_kde.log_cdf(cut) #get the log count for bg
 
 
